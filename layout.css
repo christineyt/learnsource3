@@ -1,0 +1,322 @@
+﻿/* ---reset.css--- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ---reset.css--- */
+
+html {	
+	font-family:Helvetica, sans-serif;
+	-webkit-text-size-adjust:none;
+	background-color:#CCC;
+}
+
+body{
+	background-image:url(images/bg.png);
+	padding-bottom:30px;
+}
+
+/* --電腦版型------------------------------------- */
+
+#WRAPPER{}
+
+#TOP-MENU{
+	display:none;
+}
+
+#TOP-MENU #BTN{}
+
+#NAV{
+	width:1020px;
+	height:60px;
+	margin:0 auto;
+	background-color:#369;	
+	position:relative;
+	top:0;
+	left:0;	
+	z-index:888;
+	box-shadow:none;
+}
+
+
+
+#NAV #XX{
+	display:none;
+}
+
+#NAV ul{
+	width:1020px;
+	height:60px;
+}
+
+#NAV li{
+	float:left;
+}
+
+#NAV li a{
+	display:block;
+	width:204px;
+	line-height:60px;
+	text-align:center;
+	text-decoration:none;
+	color:#FFF;	
+}
+
+#NAV li a:hover{
+	color:#0CF;
+}
+
+#BANNER{
+	width:1000px;
+	height:350px;
+	margin:0 auto;
+	border:10px solid #FFF;
+}
+
+#BANNER h1{
+	display:block;
+	width:1000px;
+	height:350px;
+	background-image:url(images/banner.jpg);
+	text-indent:-9999px;
+}
+
+
+#CONTENT{
+	width:1020px;
+	margin:0 auto;
+	overflow:hidden;
+	background-color:#FFF;
+	padding:10px 0px;
+}
+
+#CONTENT .BOX{
+	float:left;
+	width:280px;
+	margin-left:45px;
+}
+
+#CONTENT .BOX h3{
+	font-size:2em;
+	line-height:2;
+	border-bottom:2px solid #369;
+	color:#369;
+	text-align:center;
+}
+
+#CONTENT .BOX p{
+	font-size:15px;
+	line-height:1.8;
+	padding:20px;
+	color:#333;
+}
+
+#DOWN{
+	clear:both;
+	width:1020px;
+	margin:20px auto;
+	background-color:#369;
+	padding:20px 0px;
+}
+
+#DOWN p{
+	font-size:13px;
+	text-align:center;
+	line-height:1.8;
+	color:#FFF;
+}
+
+
+/* --手機版型------------------------------------- */
+
+@media screen and (max-width: 736px) {
+	
+	*{
+		box-sizing:border-box;
+	}
+	
+	
+	#WRAPPER{
+		min-width:320px;
+	}
+		
+	#TOP-MENU{
+		display:block;
+		width:100%;
+		height:60px;
+		position:relative;
+		background-color:#FFF;
+	}
+	
+	#TOP-MENU #BTN{
+		display:block;
+		width:60px;
+		height:40px;
+		background-image:url(images/btn.jpg);
+		position:absolute;
+		right:5px;
+		top:15px;
+		text-indent:-9999px;
+		cursor:pointer;
+	}
+	
+	#NAV{
+		width:100%;
+		height:100%;
+		background-color:#FFF;	
+		position:fixed; /*成為一個獨立的<div>*/
+		top:0;
+		z-index:9999;
+		border:4px solid #369;
+		
+		transform:translate3d(-1000px,0px,0px); 
+		/*初始：把選單先推出去 -1000 營幕之外*/
+	}
+	
+	#NAV.goIN{
+		transition: 1s ; /* 1s 代表產生動畫時間 */
+		transform:translate3d(0px,0px,0px); /*讓選單回到 0 營幕之內*/
+	}
+	
+	#NAV.goOUT{
+		transition: 1s ; /* 1s 代表產生動畫時間 */
+		transform:translate3d(-1000px,0px,0px); 
+		/*把選單先推出去 -1000 營幕之外*/
+	}
+	
+	#NAV #XX{
+		display:block;
+		width:60px;
+		height:40px;
+		color:#369;
+		position:absolute;
+		font-size:40px;
+		right:5px;
+		top:15px;
+		text-align:center;
+		line-height:40px;
+		cursor:pointer;
+	}	
+	#NAV ul{
+		width:300px;
+		height:250px;
+		background-color:#FFF;	
+		position:fixed;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		margin:auto;		
+	}
+	#NAV li{
+		width:100%;
+		float:none;
+	}	
+	#NAV li a{
+		display:block;
+		width:100%;
+		line-height:48px;
+		text-align:center;
+		text-decoration:none;
+		color:#369;
+		font-weight:bold;	
+	}	
+	#NAV li a:hover{
+		
+	}
+	
+	#BANNER{
+		width:100%;
+		height:350px;
+		border:10px solid #FFF;
+	}
+	
+	#BANNER h1{
+		display:block;
+		width:100%;
+		height:350px;
+		background-image:url(images/banner-small.jpg);
+		
+		background-size:cover; /* 背景圖自動伸縮 */
+		background-position:center center;	/* 以中心為縮放點 */
+		text-indent:-9999px;
+	}
+	
+	#CONTENT{
+		width:100%;
+		background-color:#FFF;
+		padding:10px 0px;
+	}	
+	#CONTENT .BOX{
+		float:none;
+		width:100%;
+		margin:0;
+		padding:10px 20px;
+	}	
+	#CONTENT .BOX h3{
+		font-size:32px;
+		line-height:2;
+		border-bottom:2px solid #369;
+		color:#369;
+		text-align:center;
+	}	
+	#CONTENT .BOX p{
+		font-size:18px;
+		line-height:1.8;
+		padding:20px;
+		color:#333;
+	}
+	
+	#DOWN{
+		clear:both;
+		width:100%;
+		margin:20px auto;
+		background-color:#369;
+		padding:20px 0px;
+	}	
+	#DOWN p{
+		font-size:13px;
+		text-align:center;
+		line-height:1.8;
+		color:#FFF;
+	}
+}
